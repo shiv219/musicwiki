@@ -9,28 +9,28 @@ import com.shiv.musicwiki.R
 
 @BindingAdapter("loadAlbum")
 fun ImageView.loadAlbum(imageString: String?) {
-//    if(imageString.isNullOrEmpty()){
-//    this.setImageResource(R.drawable.album)
-//}else
-    Glide.with(context).load(imageString).placeholder(R.drawable.album).error(R.drawable.album).into(this)
+
+    Glide.with(context).load(imageString).placeholder(R.drawable.album).error(R.drawable.album)
+        .into(this)
 }
+
 @BindingAdapter("loadArtist")
 fun ImageView.loadArtist(imageString: String?) {
-    if(imageString.isNullOrEmpty()){
-    this.setImageResource(R.drawable.artist)
-}else
-    Glide.with(context).load(imageString).into(this)
+    Glide.with(context).load(imageString).placeholder(R.drawable.artist).error(R.drawable.artist)
+        .into(this)
+
 }
+
 @BindingAdapter("loadTrack")
 fun ImageView.loadTrack(imageString: String?) {
-    if(imageString.isNullOrEmpty()){
-    this.setImageResource(R.drawable.track)
-}else
-    Glide.with(context).load(imageString).into(this)
+
+    Glide.with(context).load(imageString).placeholder(R.drawable.track).error(R.drawable.track)
+        .into(this)
+
 }
 
 @BindingAdapter("htmlText")
-fun TextView.htmlText(htmlText:String?){
+fun TextView.htmlText(htmlText: String?) {
     htmlText?.let {
         this.text = Html.fromHtml(it)
     }

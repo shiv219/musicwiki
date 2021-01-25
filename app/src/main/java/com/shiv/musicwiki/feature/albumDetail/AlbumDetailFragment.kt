@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.shiv.musicwiki.R
 import com.shiv.musicwiki.base.BaseFragment
 import com.shiv.musicwiki.databinding.FragmentAlbumDetailBinding
+import com.shiv.musicwiki.ext.showToast
 import com.shiv.musicwiki.ext.toAppError
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -72,6 +73,9 @@ class AlbumDetailFragment : BaseFragment(R.layout.fragment_album_detail) {
                 }
                 state.getValueOrNull()?.let {
                     mAlbumDetailViewModel.albumInfoResponse.value = it
+                    if(it.album==null) {
+                        showToast(getString(R.string.album_error))
+                    }
                 }
             }
         }

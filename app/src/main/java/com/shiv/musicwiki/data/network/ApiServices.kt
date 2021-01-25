@@ -16,15 +16,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiServices {
-    //http://ws.audioscrobbler.com/2.0/?method=chart.gettoptags&api_key=e9519af5628f42085cdb5296cbdd3c9b&format=json
-//    http://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=disco&api_key=e9519af5628f42085cdb5296cbdd3c9b&format=json
-//    http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=disco&api_key=e9519af5628f42085cdb5296cbdd3c9b&format=json
-//    http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=e9519af5628f42085cdb5296cbdd3c9b&format=json
-//    http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=disco&api_key=YOUR_API_KEY&format=json
-//    http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=e9519af5628f42085cdb5296cbdd3c9b&format=json
-//    /2.0/?method=album.getinfo&api_key=YOUR_API_KEY&artist=Cher&album=Believe&format=json
-
-//    http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=cher&api_key=e9519af5628f42085cdb5296cbdd3c9b&format=json
     @GET("2.0/")
     suspend fun getGenreList(
         @Query("method") method: String = Constants.gettoptags,
@@ -104,5 +95,3 @@ interface ApiServices {
     ): ArtistTopTrackResposne
 
 }
-
-//http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=cher&api_key=e9519af5628f42085cdb5296cbdd3c9b&format=json

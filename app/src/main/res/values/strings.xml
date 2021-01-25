@@ -17,4 +17,5 @@
     <string name="followers">Followers</string>
     <string name="top_tracks">Top Tracks</string>
     <string name="top_album">Top Album</string>
+    <string name="album_error">Album not found</string>
 </resources>
