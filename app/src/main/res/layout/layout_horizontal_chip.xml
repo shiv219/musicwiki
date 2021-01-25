@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="genreName"
+            type="java.lang.String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <com.google.android.material.chip.Chip xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{genreName}"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:checkedIconVisible="false"
+            app:chipBackgroundColor="@color/gray"
+            app:chipEndPadding="@dimen/padding_horizontal_16"
+            app:chipStartPadding="@dimen/padding_horizontal_16"
+            app:chipStrokeColor="@color/category_border_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Overdraw"
+            android:textAlignment="center"
+            tools:text="hoge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
