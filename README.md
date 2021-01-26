@@ -1,5 +1,5 @@
 ## 🌟 musicwiki
-App demonstrate a good experience of music library with artist and album details categorised on the basis of genre. This App uses apis from https://www.last.fm/api. you just need to create your account and paste your api key build.gradle file and you are good to go.   
+App demonstrate a good experience of music library with artist and album details categorised on the basis of genre. This App uses apis from https://www.last.fm/api. you just need to create your account and paste your api key in build.gradle file and you are good to go.   
 
 ## ✨ Screenshots
 | Genre | Home |  Artist |
